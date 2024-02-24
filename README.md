@@ -21,6 +21,21 @@ O repositório está organizado da seguinte forma:
 
 Para utilizar os recursos deste repositório no seu computador, você poderá baixar ele pelo botão "<> code" (em verde), clique em zip ou clonar para abrir em seu github desktop (caso não possua será necessário realizar a instalação).
 
+### Visual Studio Code (Opcional)
+
+- Dentro do Visual Studio Code, caso utiilize-o, recomendo que instale a extensão 'Better Comments', pois os comentários foram feitos utilizando eles.
+- Após a instalação, clique no icone de engrenagem no canto do aplicativo, e abra a aba de configuração, ou no teclado faça Ctrl + ,
+- Ao abrir a tela de configurações, vá até outra engrenagem que fica no canto superior do documento, com a descrição 'Abrir configurações JSON'
+- Nessa tela, procure pela configuração da extensão "better-comments.tags".
+- Nesta parte, cole toda a configuração abaixo
+
+          { "tag": "!", "color": "#F44336", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
+          { "tag": "?", "color": "#2196F3", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
+          { "tag": "%", "color": "#FFEB3B", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
+          { "tag": "$", "color": "#FF8C00", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
+          { "tag": "*", "color": "#4CAF50", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
+          { "tag": "@", "color": "#9C27B0", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false }
+
 Qualquer dúvida entre em contato pelo discord 'omigaass' ou pelo email 'miguelanperibeiro@gmail.com'
 Caso tenha meu contato pessoal, podem me chamar por lá.
 
