@@ -32,3 +32,19 @@ int main()
 !System.: media:7.65
 
 */
+
+/*!
+*código completo sem comentários:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float n1, n2;
+    printf("informe 2 numeros float \n");
+    scanf("%f %f", &n1, &n2);
+    printf("media:%.2f\n", (n1+n2)/2);
+    system("pause");
+}
+*/

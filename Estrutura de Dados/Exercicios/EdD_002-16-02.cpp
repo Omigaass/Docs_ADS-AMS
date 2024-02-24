@@ -1,3 +1,4 @@
+
 //? Inclui a biblioteca que permite a entrada e saida de dados
 //? Inclui a biblioteca que permite a função system('pause');
 #include <iostream>
@@ -33,4 +34,22 @@ int main()
 ?Client.: 5
 ?Client.: 10
 !System.: media7.5
+*/
+
+/*
+*código completo sem comentários:
+
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int main()
+{
+    float n1, n2;
+    cout << "informe 2 numeros reais: \n";
+    cin >> n1 >> n2;
+    cout << "media " << (n1+n2)/2 << endl;
+    system("pause");
+}
+
 */
