@@ -1,6 +1,7 @@
+
 #include <iostream>
 using namespace std;
-int main(int argc, char const *argv[])
+int main()
 {
     float notas[5];
     int i;
