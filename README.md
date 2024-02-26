@@ -29,12 +29,12 @@ Para utilizar os recursos deste repositório no seu computador, você poderá ba
 - Nessa tela, procure pela configuração da extensão "better-comments.tags".
 - Nesta parte, cole toda a configuração abaixo
 
-          { "tag": "!", "color": "#F44336", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
-          { "tag": "?", "color": "#2196F3", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
-          { "tag": "%", "color": "#FFEB3B", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
-          { "tag": "$", "color": "#FF8C00", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
-          { "tag": "*", "color": "#4CAF50", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
-          { "tag": "@", "color": "#9C27B0", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false }
+          { "tag": "!", "color": "#E57373", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
+          { "tag": "?", "color": "#64B5F6", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
+          { "tag": "%", "color": "#FFF176", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
+          { "tag": "$", "color": "#FFB74D", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
+          { "tag": "*", "color": "#81C784", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false },
+          { "tag": "@", "color": "#BA68C8", "strikethrough": false, "underline": false, "backgroundColor": "transparent", "bold": false, "italic": false }
 
 Qualquer dúvida entre em contato pelo discord 'omigaass' ou pelo email 'miguelanperibeiro@gmail.com'
 Caso tenha meu contato pessoal, podem me chamar por lá.
