@@ -14,7 +14,6 @@ using namespace std;
 int main()
 {
     int NumberRolls;
-    bool validSeq;
 
     while (true) {
         std::cout << "Digite um valor inteiro para quantidade de lancamentos: ";
@@ -41,14 +40,11 @@ int main()
         int x = RollDice[i];
         if (x == RollDice[i + 1] && x == RollDice[i + 2])
         {
-            validSeq = false;
-        } else {
-            validSeq = true;
+            cout << "Sequencia Invalida, o valor '" << x << "' foi repetido mais de 2 vezes consecutivas" << endl; 
+            break;
         }
+        if (x == NumberRolls) { cout << "Sequencia valida" << endl; }
     }
-    
-    
-    
     return 0;
 }
 
