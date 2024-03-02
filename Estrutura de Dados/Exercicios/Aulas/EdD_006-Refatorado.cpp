@@ -1,52 +1,119 @@
 #include <iostream>
-#include <vector> // Incluindo a biblioteca vector para uso posterior
+#include <string>
+#include <vector>
+
 using namespace std;
 
-// Declarando protótipos de funções
-void abrir_conta(vector<string> &titulares, vector<float> &saldos); // Recebendo referências aos vetores para que as alterações sejam refletidas fora da função
-void saldo_atual();
-void deposito();
-void saque();
+class ContaBancaria {
+private:
+    string nomeCliente;
+    double saldoCliente;
 
-int main()
-{
-    int opcaoConta;
-    vector<string> titulares; // Vetor para armazenar os titulares das contas
-    vector<float> saldos; // Vetor para armazenar os saldos das contas
+public:
+    ContaBancaria(string nome, double saldoInicial) {
+        nomeCliente = nome;
+        saldoCliente = saldoInicial;
+    }
 
-    cout << "Seja bem vindo ao banco\n";   
-    cout << "Opcoes de Conta\n 1 - Criar Conta \n 2 - Lista de Contas \n 3 - Abrir Conta \n 4 - Excluir Conta\n 5 - Sair\n";
-    cin >> opcaoConta;
+    void depositar(double valor) {
+        saldoCliente += valor;
+    }
 
-    if(opcaoConta == 1){
-        abrir_conta(titulares, saldos); // Chamando a função para criar uma conta
-    }else if(opcaoConta == 2){
+    void sacar(double valor) {
+        if (valor <= saldoCliente) {
+            saldoCliente -= valor;
+        } else {
+            cout << "Saldo insuficiente." << endl;
+        }
+    }
 
-    }else if(opcaoConta == 3){
-
-    }else if(opcaoConta == 4){
-
-    }else if(opcaoConta == 5){
-
+    void imprimirInformacoes() {
+        cout << "Cliente: " << nomeCliente << endl;
+        cout << "Saldo: " << saldoCliente << endl;
     }
     
+    string getNomeCliente() {
+        return nomeCliente;
+    }
+
+    void setSaldo(double novoSaldo) {
+        saldoCliente = novoSaldo;
+    }
+};
+
+int main() {
+    vector<ContaBancaria> contas;
+    int opcaoConta;
+    int numContas;
+
+    while (true) {
+        system("cls");
+
+        cout << "Seja bem vindo ao banco\n";
+        cout << "Opcoes de Conta\n 1 - Criar Conta \n 2 - Lista de Contas \n 3 - Editar Conta \n 4 - Excluir Conta\n 5 - Sair\n";
+        cin >> opcaoConta;
+
+        switch (opcaoConta) {
+            case 1: {
+                cout << "Quantas contas deseja criar? ";
+                cin >> numContas;
+
+                for (int i = 0; i < numContas; ++i) {
+                    string nome;
+                    double saldoInicial;
+                    cout << "\nDigite o nome do cliente da conta " << i + 1 << ": ";
+                    cin >> nome;
+                    cout << "Digite o saldo inicial da conta " << i + 1 << ": ";
+                    cin >> saldoInicial;
+
+                    ContaBancaria novaConta(nome, saldoInicial);
+                    contas.push_back(novaConta);
+                }
+                break;
+            }
+            case 2:
+                for (int i = 0; i < contas.size(); ++i) {
+                    cout << "\nInformacoes da conta " << i + 1 << ":\n";
+                    contas[i].imprimirInformacoes();
+                }
+                break;
+            case 3: {
+                string nomeEdicao;
+                cout << "Digite o nome da conta que deseja editar:" << endl;
+                cin >> nomeEdicao;
+
+                bool contaEncontrada = false;
+                for (int i = 0; i < contas.size(); ++i) {
+                    if (contas[i].getNomeCliente() == nomeEdicao) {
+                        double novoSaldo;
+                        cout << "Digite o novo saldo para a conta de " << nomeEdicao << ": ";
+                        cin >> novoSaldo;
+                        contas[i].setSaldo(novoSaldo);
+                        contaEncontrada = true;
+                        cout << "Conta editada com sucesso!" << endl;
+                        break;
+                    }
+                }
+                if (!contaEncontrada) {
+                    cout << "Conta não encontrada." << endl;
+                }
+                break;
+            }
+            case 4:
+                cout << "Funcionalidade ainda não implementada." << endl;
+                break;
+            case 5:
+                cout << "Saindo do programa..." << endl;
+                return 0;
+            default:
+                cout << "Opcao invalida. Tente novamente." << endl;
+                break;
+        }
+
+        cout << "\nPressione ENTER para continuar...";
+        cin.ignore();
+        cin.get();
+    }
+
     return 0;
 }
-
-// Função para criar uma nova conta
-void abrir_conta(vector<string> &titulares, vector<float> &saldos) {
-    string titular;
-    float saldo;
-
-    cout << "Digite o nome do titular da conta: \n";
-    cin >> titular;
-    titulares.push_back(titular); // Adicionando o titular ao vetor de titulares
-
-    cout << "Digite o valor inicial da conta: \n";
-    cin >> saldo;
-    saldos.push_back(saldo); // Adicionando o saldo ao vetor de saldos
-
-    cout << "Conta criada com sucesso\n";
-}
-
-// Outras funções podem ser implementadas conforme necessário
