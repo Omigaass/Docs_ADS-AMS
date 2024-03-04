@@ -43,11 +43,10 @@ public:
 
 int main() {
     vector<ContaBancaria> contas;
-    int opcaoConta;
-    int numContas;
+    int opcaoConta, numContas, QuantContas = 0; 
 
     while (true) {
-        system("cls");
+        system("cls"); 
 
         cout << "Seja bem vindo ao banco\n";
         cout << "Opcoes de Conta\n 1 - Criar Conta \n 2 - Lista de Contas \n 3 - Editar Conta \n 4 - Excluir Conta\n 5 - Sair\n";
@@ -68,6 +67,7 @@ int main() {
 
                     ContaBancaria novaConta(nome, saldoInicial);
                     contas.push_back(novaConta);
+                    QuantContas++;
                 }
                 break;
             }
@@ -99,9 +99,28 @@ int main() {
                 }
                 break;
             }
-            case 4:
-                cout << "Funcionalidade ainda não implementada." << endl;
+            case 4: {
+                string nomeExclusao;
+                cout << "Digite o nome da conta que deseja excluir." << endl;
+                cin >> nomeExclusao;
+
+                bool contaEncontrada = false;
+                for (int i = 0; i < contas.size(); ++i) {
+                    if (contas[i].getNomeCliente() == nomeExclusao) {
+                        for (int j = i; j < contas.size() - 1; ++j) {
+                            contas[j] = contas[j + 1];
+                        }
+                        contas.pop_back();
+                        contaEncontrada = true;
+                        cout << "\nConta removida com sucesso!" << endl;
+                        break;
+                    }
+                }
+                if (!contaEncontrada) {
+                    cout << "Conta não encontrada." << endl;
+                }
                 break;
+            }
             case 5:
                 cout << "Saindo do programa..." << endl;
                 return 0;
