@@ -72,7 +72,7 @@ int main() {
                 break;
             }
             case 2:
-                for (int i = 0; i < contas.size(); ++i) {
+                for (size_t i = 0; i < contas.size(); ++i) {
                     cout << "\nInformacoes da conta " << i + 1 << ":\n";
                     contas[i].imprimirInformacoes();
                 }
@@ -83,7 +83,7 @@ int main() {
                 cin >> nomeEdicao;
 
                 bool contaEncontrada = false;
-                for (int i = 0; i < contas.size(); ++i) {
+                for (size_t i = 0; i < contas.size(); ++i) {
                     if (contas[i].getNomeCliente() == nomeEdicao) {
                         double novoSaldo;
                         cout << "Digite o novo saldo para a conta de " << nomeEdicao << ": ";
@@ -105,9 +105,9 @@ int main() {
                 cin >> nomeExclusao;
 
                 bool contaEncontrada = false;
-                for (int i = 0; i < contas.size(); ++i) {
+                for (size_t i = 0; i < contas.size(); ++i) {
                     if (contas[i].getNomeCliente() == nomeExclusao) {
-                        for (int j = i; j < contas.size() - 1; ++j) {
+                        for (size_t j = i; j < contas.size() - 1; ++j) {
                             contas[j] = contas[j + 1];
                         }
                         contas.pop_back();
