@@ -3,16 +3,16 @@ using namespace std;
 
 class Vetor {
     private: int v[10], n;
-    public: vetor(){
+    public: Vetor(){
         n = 0;
     }
 
-    public: void exibicao(){
+    void exibicao(){
         cout << "\n Mostrando todos os elementos do vetor: \n";
         for(int i = 0; i < n; i++) cout << " " << v[i];
         cout << endl;
     }
-    public: void remocao() {
+    void remocao() {
         cout << "Forneca valor para remoção: ";
         int i, chave;
         cin >> chave;
@@ -28,15 +28,15 @@ class Vetor {
             }
         }
     }
-    public: void inserção(int chave){    
+    void insercao(int chave){    
         v[n] = chave;
         n++;    
     }
-    public: int pesquisa(){
+    int pesquisa(){
         cout << "Forneca valor para busca: ";
         int chave;
         cin >> chave;
-        for ( int = 0; i < n; i++){
+        for ( int i = 0; i < n; i++){
              if(v[i] == chave) return i;
         }
         return -1;
@@ -44,7 +44,7 @@ class Vetor {
 };
 
 int main() {
-    vetor v;
+    Vetor v;
     cout << "Forneca 5 valores inteiro: ";
     int chave;
     for(int i =0; i < 5; i++){
