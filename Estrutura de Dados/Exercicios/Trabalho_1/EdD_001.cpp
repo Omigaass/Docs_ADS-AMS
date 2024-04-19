@@ -5,7 +5,7 @@ void histograma(int quantAlunos){
     int notaAluno, i, A = 0, B = 0, C = 0, D = 0, E = 0;
     
     for (i = 0; i < quantAlunos; i++){
-        cout << "Insira a nota do aluno: ";
+        cout << i + 1 << " aluno: ";
         cin >> notaAluno;
         if(notaAluno >= 0 && notaAluno < 3){
             E += 1;
@@ -25,19 +25,19 @@ void histograma(int quantAlunos){
         cout << "*";
     }
     cout << "\nB: ";
-    for (i = 0; i < A; i++){
+    for (i = 0; i < B; i++){
         cout << "*";
     }
     cout << "\nC: ";
-    for (i = 0; i < A; i++){
+    for (i = 0; i < C; i++){
         cout << "*";
     }
     cout << "\nD: ";
-    for (i = 0; i < A; i++){
+    for (i = 0; i < D; i++){
         cout << "*";
     }
     cout << "\nE: ";
-    for (i = 0; i < A; i++){
+    for (i = 0; i < E; i++){
         cout << "*";
     }
 }
@@ -45,7 +45,6 @@ void histograma(int quantAlunos){
 int main()
 {
     int quantAlunos;
-    int A=0, B=0, C=0, D=0, E=0;
 
     cout << "Hello World!" << endl;
     cout << "Insira a quantidade de alunos: " << endl;
