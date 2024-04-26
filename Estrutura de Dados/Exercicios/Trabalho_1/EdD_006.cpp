@@ -94,7 +94,7 @@ void mergeSort(int v[], int esq, int dir){
 int main(){
     cout << "Hello, World!" << endl;
 
-    int n = 100000, v[n], i, troca;
+    int n = 100000, v[n], i;
 
     srand((unsigned) time(NULL));
     for(i = 0; i < n; i++){
@@ -103,6 +103,12 @@ int main(){
 
     cout << "Vetor de " << n << " elementos \n";
     
+    system("Color 0D"); 
+
+    for(i = 0; i < n; i++){
+        cout << v[i] << " ";
+    }
+
     bubbleSort(v, n);
     selectionSort(v, n);
     InsertionSort(v, n);
