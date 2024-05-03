@@ -175,5 +175,9 @@
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
+<<<<<<< Updated upstream
   "cmake.sourceDirectory": "C:/Users/ACER/Desktop/Miguel/DEVELOPS/Docs_ADS-AMS/Técnicas Web Mobile/projeto_aula01/windows/flutter"
+=======
+  "cmake.sourceDirectory": "C:/Users/aluno/Desktop/Docs_ADS-AMS/Técnicas Web Mobile/projeto_aula01/windows/flutter"
+>>>>>>> Stashed changes
 }
