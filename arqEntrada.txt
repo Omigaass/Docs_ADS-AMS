@@ -1,0 +1,5 @@
+Eduardo,10,7
+Miguel,8,9
+Claudio,10,10
+Gustavo,5,6
+Tais,10,9
